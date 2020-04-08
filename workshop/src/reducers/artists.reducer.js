@@ -34,7 +34,7 @@ export default function artists(state = initialState, action) {
             };
         }
 
-        case 'RECEIVE_ARTIST-PROFILE': {
+        case 'RECEIVE_ARTIST_PROFILE': {
             return produce(state, draftState => {
                 if (!draftState.currentArtist) {
                     draftState.currentArtist = {};

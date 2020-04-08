@@ -10,14 +10,16 @@ const RelatedArtists = ({ artists }) => {
     <Wrapper>
       <Heading size="medium">Related Artists</Heading>
       <Row>
-        {artists.map(artist => (
-          <RelatedArtist
+        {artists.map(artist => {
+          console.log('artist', artist);
+          return <RelatedArtist
             key={artist.id}
             id={artist.id}
             name={artist.name}
-            imageUrl={artist.images[artist.images.length - 1].url}
+            imageUrl={
+              artist.images.length > 0 ? artist.images[artist.images.length - 1].url : null}
           />
-        ))}
+        })}
       </Row>
     </Wrapper>
   );
