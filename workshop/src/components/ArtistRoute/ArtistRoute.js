@@ -25,6 +25,20 @@ import Header from './Header';
 import TopTracks from './TopTracks';
 import GenreTags from './GenreTags';
 import RelatedArtists from './RelatedArtists';
+// import DEFAULT_ARTIST_ID from '../App';
+
+
+// const ArtistRoute = () => {
+//   const accessToken = useSelector(state => state.auth.token);
+
+//   const artistId = '6ztZs0FOUv1FqwSxsj11R3';
+
+//   fetchArtistProfile(accessToken, artistId)
+
+//   // render something
+//   ArtistRoute()
+// };
+
 
 const ArtistDetailsContainer = () => {
   const artist = useSelector(getArtist);
@@ -40,8 +54,9 @@ const ArtistDetailsContainer = () => {
     // SOmething's gone wrong!
     return 'Error';
   }
-
+  console.log('artist', artist);
   return (
+
     <>
       <Section>
         <Header
